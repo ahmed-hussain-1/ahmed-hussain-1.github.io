@@ -3,33 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HCI Projects - Ahmed Hussain</title>
+  <title>Projects – Ahmed Hussain</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
+
+  <!-- ----------  NAV (same as other pages) ---------- -->
   <nav>
     <div class="nav-container">
-      <div class="nav-left">
-        <a href="index.html" class="site-name">Ahmed Hussain</a>
-      </div>
+      <div class="nav-left"><a href="index.html" class="site-name">Ahmed Hussain</a></div>
       <div class="nav-right">
         <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="hci.html" class="active">HCI</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="hci.html">HCI</a>
         <a href="bookrecs.html">Book Recs</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
+
+  <!-- ----------  PROJECT GALLERY  ---------- -->
   <main class="content">
-    <h2>My Projects</h2>
-    <ul class="hci-list">
-      <li><strong><a href="#">HCI Project One</a>:</strong> Description of the project and what it involved. <!-- Placeholder --></li>
-      <li><strong><a href="#">HCI Project Two</a>:</strong> Description of the project and what it involved. <!-- Placeholder --></li>
-      <li><strong><a href="#">HCI Project Three</a>:</strong> Description of the project and what it involved. <!-- Placeholder --></li>
-    </ul>
-    <!-- Add or update project links and descriptions as needed. -->
+    <h2>Selected Design Work</h2>
+
+    <!-- Card Grid -->
+    <div class="card-grid">
+
+      <!-- PULSE -->
+      <article class="card">
+        <h3>Pulse — Chrome Extension</h3>
+        <p>A subtle, behavior-change extension that nudges you back to focus when online distractions strike.</p>
+        <div class="tag-wrap">
+          <span class="tag">Behavioral UX</span>
+          <span class="tag alt">Chrome</span>
+        </div>
+        <br>
+        <a href="https://medium.com/@ndc2/pulse-a-chrome-extension-to-help-you-stay-on-task-d66606dd2929" target="_blank" class="btn-small">Read Case Study</a>
+      </article>
+
+      <!-- SUPER MARIO HANDS -->
+      <article class="card">
+        <img src="images/mario_home_page.png"
+             alt="Screenshot of the Super Mario Bros. Hands Edition prototype"
+            class="card-img" />
+        <h3>Super Mario Bros. — Hands Edition</h3>
+        <p>Re-imagining Mario with gesture-based controls to explore accessibility and embodied play.</p>
+        <div class="tag-wrap">
+          <span class="tag">Accessibility</span>
+          <span class="tag alt">Alt Input</span>
+        </div>
+        <br>
+        <a href="https://medium.com/@kp12_29773/super-mario-bros-hands-edition-3af91bdaa114" target="_blank" class="btn-small">Read Case Study</a>
+      </article>
+
+      <!-- BOOKSTORE CATALOG -->
+      <article class="card">
+        <h3>DS4 — Bookstore Catalog Redesign</h3>
+        <p>A streamlined e-commerce catalog that reduces search friction and improves discoverability.</p>
+        <div class="tag-wrap">
+          <span class="tag">IA / UX</span>
+          <span class="tag alt">E-commerce</span>
+        </div>
+        <br>
+        <a href="https://medium.com/@ndc2/ds3-redesigning-a-bookstore-catalog-54095c750b52" target="_blank" class="btn-small">Read Case Study</a>
+      </article>
+
+      <!-- PATIENT PORTAL -->
+      <article class="card">
+        <h3>Eph Patient Portal (Mobile)</h3>
+        <p>A mobile-first health portal that eases first-year students into campus care and resources.</p>
+        <div class="tag-wrap">
+          <span class="tag">Service Design</span>
+          <span class="tag alt">Health UX</span>
+        </div>
+        <br>
+        <a href="https://medium.com/@chl2/designing-for-others-mobile-eph-patient-portal-for-first-years-b136f2462e3c" target="_blank" class="btn-small">Read Case Study</a>
+      </article>
+
+    </div><!-- /card-grid -->
   </main>
 </body>
 </html>
