@@ -2,58 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Recommendations - Ahmed Hussain</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Book Recs – Ahmed Hussain</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <div class="nav-container">
-      <div class="nav-left">
-        <a href="index.html" class="site-name">Ahmed Hussain</a>
-      </div>
-      <div class="nav-right">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="hci.html">HCI</a>
-        <a href="bookrecs.html" class="active">Book Recs</a>
-        <a href="contact.html">Contact</a>
-      </div>
+<nav>
+  <div class="nav-container">
+    <div class="nav-left"><a href="index.html" class="site-name">Ahmed Hussain</a></div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="hci.html">HCI</a>
+      <a href="bookrecs.html" class="active">Book Recs</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </nav>
-  <main class="content">
-    <h2>Book Recommendations</h2>
-    <p>Here are some book recommendations. Use the filters below to sort by genre or minimum rating. <!-- Placeholder intro; update or remove as needed. --></p>
-    <!-- Filter controls -->
-    <div class="filters">
-      <label for="genreFilter">Genre:</label>
-      <select id="genreFilter">
-        <option value="all">All</option>
-        <option value="Fiction">Fiction</option>
-        <option value="Science Fiction">Science Fiction</option>
-        <option value="Non-fiction">Non-fiction</option>
-      </select>
-      <label for="ratingFilter">Min Rating:</label>
-      <select id="ratingFilter">
-        <option value="all">All</option>
-        <option value="5">5 stars</option>
-        <option value="4">4+ stars</option>
-        <option value="3">3+ stars</option>
-      </select>
-    </div>
-    <ul id="book-list">
-      <li data-genre="Fiction" data-rating="4"><strong>The Great Gatsby</strong> by F. Scott Fitzgerald – <em>Fiction</em> – Rating: <span class="stars">★★★★☆</span></li>
-      <li data-genre="Fiction" data-rating="5"><strong>To Kill a Mockingbird</strong> by Harper Lee – <em>Fiction</em> – Rating: <span class="stars">★★★★★</span></li>
-      <li data-genre="Science Fiction" data-rating="5"><strong>Dune</strong> by Frank Herbert – <em>Science Fiction</em> – Rating: <span class="stars">★★★★★</span></li>
-      <li data-genre="Science Fiction" data-rating="3"><strong>Neuromancer</strong> by William Gibson – <em>Science Fiction</em> – Rating: <span class="stars">★★★☆☆</span></li>
-      <li data-genre="Non-fiction" data-rating="4"><strong>The Design of Everyday Things</strong> by Don Norman – <em>Non-fiction</em> – Rating: <span class="stars">★★★★☆</span></li>
-    </ul>
-    <!-- Replace the above list with your own book recommendations.
-         Update the data-genre and data-rating attributes accordingly.
-         If you add new genres, be sure to include them in the Genre filter dropdown. -->
-  </main>
-  <!-- Include the JavaScript file for filtering functionality -->
-  <script src="script.js"></script>
+  </div>
+</nav>
+
+<main class="content">
+  <h2>Book Recommendations</h2>
+
+  <!-- Search box -->
+  <input id="bookSearch" type="text" placeholder="Search by title or author…" />
+
+  <!-- Dynamic chips injected by JS -->
+  <div id="chipBar" class="chip-bar"></div>
+
+  <!-- Card grid populated by JS -->
+  <div id="bookGrid" class="card-grid"></div>
+</main>
+
+<!-- Modal placeholder -->
+<div id="modalOverlay" class="modal-overlay" style="display:none;"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
+
+
