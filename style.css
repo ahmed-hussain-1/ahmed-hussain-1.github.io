@@ -1,0 +1,139 @@
+/* Style for Ahmed Hussain's personal portfolio site (clean, minimal aesthetic) */
+
+/* --- Global Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.6;
+}
+/* Center the main content area */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+/* --- Navigation Bar Styles --- */
+nav {
+  background-color: #333333;
+  color: #ffffff;
+}
+.nav-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0.5em 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+/* Site name (left side of nav) */
+.nav-left a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  /* Increase font-size for site name if desired */
+}
+.nav-left a:hover {
+  text-decoration: underline;
+}
+/* Navigation links (right side of nav) */
+.nav-right a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 1em;
+}
+.nav-right a:first-child {
+  margin-left: 0;
+}
+.nav-right a:hover {
+  text-decoration: underline;
+}
+.nav-right a.active {
+  text-decoration: underline;
+  /* Optionally, use font-weight: bold; or a different color to highlight the active page */
+}
+
+/* --- Home/About Section --- */
+.about-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+}
+.profile-pic {
+  width: 150px;
+  height: auto;
+  /* Make the profile image a circle: */
+  /* border-radius: 50%; */
+}
+.about-text {
+  /* Additional styling for about text can go here */
+}
+
+/* --- Project & HCI List Styles --- */
+/* Default list styling is used for projects and HCI lists. 
+   To remove bullets, uncomment list-style none. */
+.project-list, .hci-list {
+  /* list-style: none;
+     padding-left: 0; */
+}
+.project-list li, .hci-list li {
+  margin-bottom: 0.5em;
+}
+.project-list li:last-child, .hci-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Book Recommendations List Styles --- */
+#book-list {
+  list-style: none;
+  padding-left: 0;
+}
+#book-list li {
+  margin-bottom: 0.5em;
+}
+#book-list li:last-child {
+  margin-bottom: 0;
+}
+.stars {
+  color: #FFD700; /* Gold color for star icons */
+}
+
+/* Filter controls */
+.filters {
+  margin-bottom: 1em;
+}
+.filters select {
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+.filters label {
+  margin-right: 0.5em;
+}
+
+/* --- Contact Section --- */
+/* Contact info uses default paragraph styles. Add custom styles if desired. */
+
+/* --- Responsive Design --- */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-right {
+    margin-top: 0.5em;
+  }
+  .about-section {
+    display: block;
+  }
+  .profile-pic {
+    display: block;
+    margin: 0 auto 1em auto;
+  }
+}
