@@ -20,11 +20,6 @@ body {
 h1, h2, h3, nav a,
 .site-name { font-family: 'Montserrat', sans-serif; }
 
-/* ------------------  NAV (unchanged, keep yours)  ------------------ */
-
-/* ------------------  PROJECT CARD GRID  ------------------ */
-/* ---------- CARD IMAGE ---------- */
-
 .card-img {
   width: 100%;
   height: 160px;           /* tweak this if you want taller / shorter banners */
@@ -72,7 +67,6 @@ h1, h2, h3, nav a,
 }
 .tag.alt { background: var(--accent2); }
 
-/* --------------  LINK BUTTON -------------- */
 .btn-small {
   display: inline-block;
   font-size: .85rem;
@@ -88,6 +82,30 @@ h1, h2, h3, nav a,
 /* ------------------  RESPONSIVE TWEAKS  ------------------ */
 @media (max-width: 600px) {
   .nav-container { flex-direction: column; }
+}
+
+
+/* ---------- GLOBAL TYPE TWEAK ---------- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;          /* was ~16px */
+  line-height: 1.65;
+}
+
+.about-section {
+  align-items: flex-start;  /* top-align image & text */
+  gap: 2rem;                /* more space between image and copy */
+}
+.profile-pic {
+  width: 260px;             /* larger portrait like Anna’s */
+  height: auto;
+  border-radius: 6px;       /* subtle rounding (optional) */
+}
+
+.content {
+  max-width: 1100px;        /* match nav width for symmetry */
+  padding: 2rem 1rem;       /* more breathing room */
 }
 
 
@@ -115,14 +133,11 @@ nav {
   color: #ffffff;
 }
 .nav-container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0.5em 1em;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  max-width: 1100px;
+    justify-content: flex-start; 
+  gap: 2rem;              
 }
+.nav-right a { margin-left: 1.25rem; }
 /* Site name (left side of nav) */
 .nav-left a {
   color: #ffffff;
@@ -150,25 +165,13 @@ nav {
   /* Optionally, use font-weight: bold; or a different color to highlight the active page */
 }
 
-/* --- Home/About Section --- */
-.about-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 1em;
-}
 .profile-pic {
   width: 150px;
   height: auto;
   /* Make the profile image a circle: */
   /* border-radius: 50%; */
 }
-.about-text {
-  /* Additional styling for about text can go here */
-}
 
-/* --- Project & HCI List Styles --- */
-/* Default list styling is used for projects and HCI lists. 
-   To remove bullets, uncomment list-style none. */
 .project-list, .hci-list {
   /* list-style: none;
      padding-left: 0; */
@@ -256,3 +259,117 @@ nav {
 }
 @keyframes fadeIn { from {opacity:0; transform: translateY(10px);} to {opacity:1; transform: translateY(0);} }
 
+
+
+/* === FINAL OVERRIDES TO MATCH ANNA’S LAYOUT === */
+.nav-container{
+  margin:0 auto;                 /* center the whole bar like Anna’s */
+  max-width:1100px;              /* keep the wide bar but not full-bleed */
+  display:flex;
+  justify-content:flex-start;    /* name left, links follow */
+  align-items:center;
+  padding:0.5rem 1rem;
+}
+
+.about-section{
+  display:flex;                  /* put photo + text side-by-side */
+  align-items:flex-start;
+  gap:2rem;                      /* breathing room */
+}
+
+.profile-pic{
+  width:260px;                   /* larger portrait (same as Anna’s) */
+  height:auto;
+  border-radius:6px;
+}
+
+.content{
+  max-width:1100px;              /* match nav width for a wide page */
+  margin:0 auto;                 /* center the block */
+  padding:2rem 1rem;
+}
+
+/* === BOOK-CARD FIXES === */
+.card-img{
+  aspect-ratio: 2 / 3;     /* keeps a tall book-cover shape */
+  width:100%;
+  height:auto;             /* let height follow width so whole cover shows */
+  object-fit:contain;      /* no cropping – scales to fit */
+  background:#fff;         /* letterbox area stays white */
+}
+
+.card-grid{
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); /* more columns */
+}
+
+/* optional: tighten card padding a bit */
+.card{padding:1rem .9rem;}
+
+/* === KEEP BOOK CARDS FROM STRETCHING WHEN FEW ITEMS === */
+.card-grid{
+  grid-template-columns:repeat(auto-fill,minmax(220px,280px)); /* 220-280 px tracks */
+  justify-content:center;                                      /* center leftover space */
+}
+.card{ max-width:280px; }    /* hard ceiling so a single card never grows wider */
+
+
+/* ---------- CONTACT PAGE CARDS ---------- */
+.contact-grid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.25rem;
+  margin-top:1rem;
+}
+.contact-card{
+  flex:1 1 220px;                   /* responsive column width */
+  max-width:280px;
+  background:var(--neutral-light);
+  padding:1.2rem 1rem;
+  border-radius:6px;
+  text-decoration:none;
+  color:var(--neutral-dark);
+  box-shadow:0 2px 4px rgba(0,0,0,.08);
+  transition:.15s ease;
+}
+.contact-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 6px 12px rgba(0,0,0,.12);
+}
+.contact-card i{
+  font-size:1.6rem;
+  color:var(--accent);
+  margin-bottom:.6rem;
+  display:block;
+}
+.contact-card span{
+  font-weight:600;
+  display:block;
+  margin-bottom:.25rem;
+}
+.contact-card small{
+  font-size:.85rem;
+  color:var(--primary);
+  word-break:break-all;
+}
+
+.hci-grid{
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+}
+
+/* -------- HCI layout: let two cards fill the row -------- */
+.hci-grid{
+  grid-template-columns:repeat(2, minmax(0, 1fr));  /* two true 50-50 tracks   */
+  column-gap:2rem;                                   /* breathing room between */
+}
+
+/* lift the 280-px ceiling only for cards inside .hci-grid */
+.hci-grid .card{
+  max-width:none;        /* grow to full track width */
+}
+
+/* optional: letter-box the header image so it scales nicely */
+.hci-grid .card-img{
+  aspect-ratio:16/9;     /* panoramic banner feel     */
+  object-fit:cover;      /* crop edges, keeps weight  */
+}
