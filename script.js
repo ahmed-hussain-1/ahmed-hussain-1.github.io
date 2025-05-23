@@ -103,10 +103,8 @@ const books = [
 
 ];
 
-/* ----------  UTILITIES  ---------- */
 function starString(n) { return "★★★★★☆☆☆☆☆".slice(5 - n, 10 - n); }
 
-/* ----------  RENDER CHIP BAR  ---------- */
 const chipBar = document.getElementById("chipBar");
 const allGenres = Array.from(new Set(books.flatMap(b => b.genres))).sort();
 let activeGenre = "All";
@@ -122,7 +120,6 @@ function renderChips() {
   });
 }
 
-/* ----------  RENDER GRID  ---------- */
 const bookGrid = document.getElementById("bookGrid");
 const searchBox = document.getElementById("bookSearch");
 
@@ -151,7 +148,6 @@ function filterAndRender() {
 
 searchBox.addEventListener("input", filterAndRender);
 
-/* ----------  MODAL  ---------- */
 const modalOverlay = document.getElementById("modalOverlay");
 
 function openModal(book) {
@@ -170,6 +166,5 @@ function openModal(book) {
 function closeModal() { modalOverlay.style.display = "none"; }
 modalOverlay.addEventListener("click", e => { if (e.target === modalOverlay) closeModal(); });
 
-/* ----------  INIT ---------- */
 renderChips();
 filterAndRender();

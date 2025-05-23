@@ -1,18 +1,15 @@
-/* --- Global Base Styles --- */
-
-/* ------------------  FONT IMPORT & THEME  ------------------ */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Lora:wght@400;500&display=swap');
 
 :root {
-  --primary: #2C3E50;         /* deep navy */
-  --accent:  #2980B9;         /* electric blue */
-  --accent2: #2ECC71;         /* emerald */
-  --neutral-light:#ECF0F1;    /* light gray */
-  --neutral-dark: #34495E;    /* charcoal */
+  --primary: #2C3E50; 
+  --accent:  #2980B9;
+  --accent2: #2ECC71; 
+  --neutral-light:#ECF0F1;
+  --neutral-dark: #34495E;
 }
 
 body {
-  font-family: 'Lora', serif;      /* body copy */
+  font-family: 'Lora', serif;
   background: #ffffff;
   color: var(--neutral-dark);
   line-height: 1.6;
@@ -22,10 +19,10 @@ h1, h2, h3, nav a,
 
 .card-img {
   width: 100%;
-  height: 160px;           /* tweak this if you want taller / shorter banners */
-  object-fit: cover;       /* keeps the image filled without distortion */
+  height: 160px;
+  object-fit: cover; 
   border-radius: 4px;
-  margin-bottom: 0.75rem;  /* space before the title */
+  margin-bottom: 0.75rem; 
 }
 
 .card-grid {
@@ -79,33 +76,31 @@ h1, h2, h3, nav a,
 }
 .btn-small:hover { background: var(--accent); }
 
-/* ------------------  RESPONSIVE TWEAKS  ------------------ */
 @media (max-width: 600px) {
   .nav-container { flex-direction: column; }
 }
 
 
-/* ---------- GLOBAL TYPE TWEAK ---------- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
                Roboto, Helvetica, Arial, sans-serif;
-  font-size: 18px;          /* was ~16px */
+  font-size: 18px;     
   line-height: 1.65;
 }
 
 .about-section {
-  align-items: flex-start;  /* top-align image & text */
-  gap: 2rem;                /* more space between image and copy */
+  align-items: flex-start;
+  gap: 2rem;  
 }
 .profile-pic {
-  width: 260px;             /* larger portrait like Anna’s */
+  width: 260px;   
   height: auto;
-  border-radius: 6px;       /* subtle rounding (optional) */
+  border-radius: 6px;   
 }
 
 .content {
-  max-width: 1100px;        /* match nav width for symmetry */
-  padding: 2rem 1rem;       /* more breathing room */
+  max-width: 1100px; 
+  padding: 2rem 1rem;   
 }
 
 
@@ -120,14 +115,13 @@ body {
   color: #000000;
   line-height: 1.6;
 }
-/* Center the main content area */
+
 .content {
   max-width: 800px;
   margin: 0 auto;
   padding: 1em;
 }
 
-/* --- Navigation Bar Styles --- */
 nav {
   background-color: #333333;
   color: #ffffff;
@@ -138,17 +132,14 @@ nav {
   gap: 2rem;              
 }
 .nav-right a { margin-left: 1.25rem; }
-/* Site name (left side of nav) */
 .nav-left a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
-  /* Increase font-size for site name if desired */
 }
 .nav-left a:hover {
   text-decoration: underline;
 }
-/* Navigation links (right side of nav) */
 .nav-right a {
   color: #ffffff;
   text-decoration: none;
@@ -162,19 +153,14 @@ nav {
 }
 .nav-right a.active {
   text-decoration: underline;
-  /* Optionally, use font-weight: bold; or a different color to highlight the active page */
 }
 
 .profile-pic {
   width: 150px;
   height: auto;
-  /* Make the profile image a circle: */
-  /* border-radius: 50%; */
 }
 
 .project-list, .hci-list {
-  /* list-style: none;
-     padding-left: 0; */
 }
 .project-list li, .hci-list li {
   margin-bottom: 0.5em;
@@ -183,7 +169,6 @@ nav {
   margin-bottom: 0;
 }
 
-/* --- Book Recommendations List Styles --- */
 #book-list {
   list-style: none;
   padding-left: 0;
@@ -198,7 +183,6 @@ nav {
   color: #FFD700; /* Gold color for star icons */
 }
 
-/* Filter controls */
 .filters {
   margin-bottom: 1em;
 }
@@ -210,10 +194,6 @@ nav {
   margin-right: 0.5em;
 }
 
-/* --- Contact Section --- */
-/* Contact info uses default paragraph styles. Add custom styles if desired. */
-
-/* --- Responsive Design --- */
 @media (max-width: 600px) {
   .nav-container {
     flex-direction: column;
@@ -232,7 +212,6 @@ nav {
 }
 
 
-/* ---------- FILTER CHIPS ---------- */
 .chip-bar { margin: 0.5rem 0 1rem 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .chip {
   cursor: pointer;
@@ -243,10 +222,8 @@ nav {
 }
 .chip.active { background: var(--accent); color: #fff; }
 
-/* ---------- SEARCH BOX ---------- */
 #bookSearch { padding: .4rem .6rem; width: 100%; max-width: 280px; border: 1px solid var(--neutral-dark); border-radius: 4px; margin-bottom: 1rem; }
 
-/* ---------- MODAL ---------- */
 .modal-overlay {
   position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: flex-start; justify-content: center;
   padding: 4vmin; z-index: 1000; overflow: auto;
@@ -261,59 +238,53 @@ nav {
 
 
 
-/* === FINAL OVERRIDES TO MATCH ANNA’S LAYOUT === */
 .nav-container{
-  margin:0 auto;                 /* center the whole bar like Anna’s */
-  max-width:1100px;              /* keep the wide bar but not full-bleed */
+  margin:0 auto;      
+  max-width:1100px;        
   display:flex;
-  justify-content:flex-start;    /* name left, links follow */
+  justify-content:flex-start; 
   align-items:center;
   padding:0.5rem 1rem;
 }
 
 .about-section{
-  display:flex;                  /* put photo + text side-by-side */
+  display:flex;            
   align-items:flex-start;
-  gap:2rem;                      /* breathing room */
+  gap:2rem;             
 }
 
 .profile-pic{
-  width:260px;                   /* larger portrait (same as Anna’s) */
+  width:260px;          
   height:auto;
   border-radius:6px;
 }
 
 .content{
-  max-width:1100px;              /* match nav width for a wide page */
-  margin:0 auto;                 /* center the block */
+  max-width:1100px; 
+  margin:0 auto;  
   padding:2rem 1rem;
 }
-
-/* === BOOK-CARD FIXES === */
 .card-img{
-  aspect-ratio: 2 / 3;     /* keeps a tall book-cover shape */
+  aspect-ratio: 2 / 3;  
   width:100%;
-  height:auto;             /* let height follow width so whole cover shows */
-  object-fit:contain;      /* no cropping – scales to fit */
-  background:#fff;         /* letterbox area stays white */
+  height:auto;   
+  object-fit:contain;  
+  background:#fff; 
 }
 
 .card-grid{
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); /* more columns */
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); 
 }
 
-/* optional: tighten card padding a bit */
 .card{padding:1rem .9rem;}
 
-/* === KEEP BOOK CARDS FROM STRETCHING WHEN FEW ITEMS === */
 .card-grid{
-  grid-template-columns:repeat(auto-fill,minmax(220px,280px)); /* 220-280 px tracks */
-  justify-content:center;                                      /* center leftover space */
+  grid-template-columns:repeat(auto-fill,minmax(220px,280px)); 
+  justify-content:center; 
 }
-.card{ max-width:280px; }    /* hard ceiling so a single card never grows wider */
+.card{ max-width:280px; } 
 
 
-/* ---------- CONTACT PAGE CARDS ---------- */
 .contact-grid{
   display:flex;
   flex-wrap:wrap;
@@ -321,7 +292,7 @@ nav {
   margin-top:1rem;
 }
 .contact-card{
-  flex:1 1 220px;                   /* responsive column width */
+  flex:1 1 220px;               
   max-width:280px;
   background:var(--neutral-light);
   padding:1.2rem 1rem;
@@ -357,19 +328,16 @@ nav {
   justify-content: center;
 }
 
-/* -------- HCI layout: let two cards fill the row -------- */
 .hci-grid{
-  grid-template-columns:repeat(2, minmax(0, 1fr));  /* two true 50-50 tracks   */
-  column-gap:2rem;                                   /* breathing room between */
+  grid-template-columns:repeat(2, minmax(0, 1fr));  
+  column-gap:2rem;
 }
 
-/* lift the 280-px ceiling only for cards inside .hci-grid */
 .hci-grid .card{
-  max-width:none;        /* grow to full track width */
+  max-width:none;     
 }
 
-/* optional: letter-box the header image so it scales nicely */
 .hci-grid .card-img{
-  aspect-ratio:16/9;     /* panoramic banner feel     */
-  object-fit:cover;      /* crop edges, keeps weight  */
+  aspect-ratio:16/9;    
+  object-fit:cover;  
 }
