@@ -10,6 +10,18 @@ const books = [
     oneLiner: "",
     cover: "images/books/the_selfish_gene.png",
   },
+
+  {
+    id: 6, 
+    title: "Geopolitical Alpha - An Investment Framework for Predicting the Future",
+    date: "2021",
+    author: "Marko Papic",
+    genres: "[Politics]",
+    rating: 5,
+    oneLiner: "",
+    cover: "images/books/geopolitical-alpha.jpg"
+  },
+
   {
     id: 5,
     title: "The Art of Strategy",
